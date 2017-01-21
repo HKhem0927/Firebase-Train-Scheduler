@@ -11,10 +11,10 @@ var database = firebase.database();
 
 
 
-$("#addTrainBtn").on("click", function(event){
+$("#addTrain").on("click", function(event){
 	event.preventDefault();
 	// Grabs user input
-	var trainName = $("#trainNameInput").val().trim();
+	var trainName = $("#trainName").val().trim();
 	var trainDestination = $("#destinationInput").val().trim();
 	var firstTrainTime = moment($("#timeInput").val().trim(), "HH:mm").format("X");
 	var trainFrequency = $("#frequencyInput").val().trim();
@@ -31,7 +31,7 @@ $("#addTrainBtn").on("click", function(event){
 	database.ref().push(newTrain);
 
 	
-	$("#trainNameInput").val("");
+	$("#trainName").val("");
 	$("#destinationInput").val("");
 	$("#timeInput").val("");
 	$("#frequencyInput").val("");
