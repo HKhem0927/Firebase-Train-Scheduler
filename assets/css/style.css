@@ -1,8 +1,10 @@
-body {
-	
-}
 .jumbotron {
 	background-color: brown;
 	;
 	color: white;
+}
+
+body {
+	background-image: url("../images/train.jpg");
+	
 }
